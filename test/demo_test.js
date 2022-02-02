@@ -1,4 +1,3 @@
-const mocha = require('mocha');
 const assert = require('assert');
 const MarioChar = require('../models/mariochar');
 
@@ -9,7 +8,8 @@ describe('Saving records', function () {
   // create a test
   it('Save a record to database', function(done){
    var char = new MarioChar({
-     name: 'mario'
+     name: 'mario',
+     weight: 10,
    });
 
    char.save().then(function(){
